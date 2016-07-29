@@ -1,0 +1,29 @@
+ <md-chips 
+    ng-model="prevSkills" 
+    md-autocomplete-snap="" 
+    md-transform-chip="transformChip($chip)">
+
+    <md-autocomplete 
+      md-selected-item="selectedItem" 
+      md-search-text="searchSkill" 
+      md-items="skill in skills | filter:searchSkill" 
+      md-item-text="job.learningOp" 
+      placeholder="Search for Skill">
+        <span md-highlight-text="searchSkill">{{skill.display}}</span>
+    </md-autocomplete>
+
+    <md-chip-template>
+      <span>
+        <strong>{{$chip.display}}</strong>
+      </span>
+    </md-chip-template>
+
+</md-chips>
+
+    
+
+  </md-content>
+
+
+
+

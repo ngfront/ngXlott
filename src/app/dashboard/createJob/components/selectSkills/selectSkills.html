@@ -1,0 +1,47 @@
+<md-content class="md-padding" layout="column">
+    
+
+    <md-chips 
+      ng-model="ss.selectedSkills" 
+      md-autocomplete-snap="" 
+      md-transform-chip="ss.transformChip($chip)" 
+      >
+
+      <md-autocomplete 
+        md-selected-item="ss.selectedItem" 
+        md-search-text="ss.searchSkill" 
+        md-items="skill in ss.skills | filter:ss.searchSkill" 
+        md-item-text="skill.display" 
+        placeholder="Enter Skills(type,select and rate each skill)">
+          <span md-highlight-text="ss.searchSkill">{{skill.display}}</span>
+      </md-autocomplete>
+    </md-chips>
+
+    
+
+  </md-content>
+  
+  <div class="errorBlock" ng-show="ss.displayError">
+    Skill Already Added. Please Search Another Skill
+  </div>
+
+  <section class="skillRanker">
+  
+<div class="skillSlab" ng-repeat="skill in ss.job.jobs_skills track by $index">
+  <div class="interactiveArea">  <label for="">{{skill.display}}</label>
+    <div class="range-slider">
+        <input ng-model="skill.score" class="input-range" type="range" min="1" max="5">
+        <!-- <span class="range-value" ng-model="skill.score">
+          {{skill.score}}
+        </span>  -->
+        <span class="ratingText">
+          <div class="text" ng-if="skill.score==1">Average</div>
+          <div class="text" ng-if="skill.score==2">Fair</div>
+          <div class="text" ng-if="skill.score==3">Good</div>
+          <div class="text" ng-if="skill.score==4">Very Good</div>
+          <div class="text" ng-if="skill.score==5">Excellent</div>
+        </span>
+    </div> </div>
+  <div class="closeAction"><i class="fa fa-times" ng-click="ss.job.jobs_skills.splice($index,1)"></i></div>
+</div>
+</section>

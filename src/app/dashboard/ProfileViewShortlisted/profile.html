@@ -1,0 +1,111 @@
+<div class="profileDetailshead">
+<i class="fa fa-angle-left" ng-click="pvs.navigateBack()"><md-tooltip>Back to Search Results</md-tooltip></i><h1>Profile Details</h1>	
+</div>
+
+
+<section class="profileWraper">
+
+	<div class="introBand">
+		<div class="avatar_block">
+			<img ng-src="{{pvs.profile.avatar}}" alt="">
+		</div>
+		<div class="meta_block">
+			<h3 class="profile_name">{{pvs.profile.name}}</h3>
+			<p class="profile_location">{{pvs.profile.location}}</p>
+			<p class="profile_social">
+				<a class="git" ng-href="{{pvs.profile.social.git}}"><i class="fa fa-github"></i></a>
+				<a class="stack" ng-href="{{pvs.profile.social.stack}}"><i class="fa fa-stack-overflow"></i></a>
+				<a class="web" ng-href="{{pvs.profile.social.web}}"><i class="fa fa-chrome"></i> </a>
+			</p>
+		</div>
+		<div class="selectionControl_block">
+			<a href="emailto:steve@appl.com" class="email_link"><i class="fa fa-envelope-o"><md-tooltip>Email</md-tooltip></i></a>
+			
+ <a href="#" class="bookmark"><i ng-click="pvs.triggerProfileShortlist(profile.id)" class="fa fa-bookmark-o"><md-tooltip>Shortlist</md-tooltip></i></a>
+		</div>
+	</div>
+	
+	<div class="summary_section">
+	<p class="descArea">
+		Lorem ipsum dolor sit amet, <span class="highlight">consectetur adipisicing</span>  elit. Distinctio quidem eaque <span class="highlight">consectetur adipisicing</span>impedit eos, a fugit
+	</p>
+	<span class="navigateToNextProfile" ng-click="pvs.navigateToNextProfile()">
+		<i class="fa fa-angle-right"><md-tooltip>Next Profile</md-tooltip></i>
+	</span>
+
+	</div>
+
+	<div class="skills_section" ng-cloak>
+	<div class="sectionHead ">
+		<span>SKILLS</span>
+	</div>
+	<md-content>
+	<md-tabs md-dynamic-height md-border-bottom>
+
+	<md-tab ng-repeat="(skill, val) in pvs.profile.skills" label="{{skill}}">
+	
+	<md-content class="md-padding">     
+	<ul class="skillsRating">
+		<li  ng-repeat="(skill, rating) in val | limitObjectTo:pvs.limitAllSkills">
+			<div class="skill_wrap">
+				<label ng-click="pvs.checkForSkill(skill)" for="">{{skill}}</label>
+				<div class="meterWrap">
+					<div class="meter">
+						<div ng-class="rating"></div>
+					</div>
+					<span class="rating">{{rating}}</span>
+				</div>
+			</div>
+		</li>
+		<a ng-if="pvs.showMoreLink" ng-click="pvs.showAllSkills()" href="" class="show_more">There are {{pvs.showMoreinAllSkills}} more skills</a>
+	</ul>
+</md-content>
+
+</md-tab>
+</md-tabs>
+</md-content>
+</div>
+
+<div class="codeSample_section" ng-cloak>
+<div class="sectionHead ">
+		<span>CODE SAMPLES</span>
+	</div>
+	<md-content>
+		<md-tabs md-dynamic-height md-border-bottom>
+			<md-tab ng-repeat="(skill, val) in pvs.profile.code_samples" label="{{skill}}">
+				<md-content class="md-padding">     
+					<!-- Nested Tab starts -->
+					<md-content>
+						<md-tabs md-dynamic-height md-border-bottom>
+							<md-tab ng-repeat="(repo, info) in val" label="{{repo}}">
+
+								<md-content class="question_block" class="md-padding" ng-repeat="info in info">     
+									<!-- Repeater of Questions and Answers -->
+									<div class="question_card">
+									<div class="headlineWrap">
+										<h3 class="question">{{info.question}}</h3><span class="meta">
+											<span class="date">{{info.meta_data.date}}</span>
+										</span>		
+									</div>
+									<div class="answerExcerpt">
+										<p>{{info.answer}}</p>
+										<a ng-href="{{info.meta_data.link}}" class="linkToAnswer"></a>
+									</div>	
+	
+									</div>
+								</md-content>
+
+							</md-tab>
+						</md-tabs>
+					</md-content>
+					<!-- Nested Tab Ends -->
+				</md-content>
+			</md-tab>
+		</md-tabs>
+	</md-content>
+
+</div>
+</section>
+
+
+

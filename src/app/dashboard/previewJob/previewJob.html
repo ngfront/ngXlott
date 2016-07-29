@@ -1,0 +1,244 @@
+<span class="cancelbutton" ng-click="pj.navigateToCreateJob()"><i class="fa fa-times"></i></span>
+<aside class="opportunityMeta">
+
+	<figure class="company_logo">
+		<img src="http://lorempixel.com/400/200/" alt="">
+	</figure>
+	<div class="companyName">{{pj.company.companyName}}</div>
+	<div class="socialWrap">
+		<span class="fb"><a href="pj.company.companySocialAngel"><i class="fa fa-angellist"></i></a></span>
+		<span class="web"><a href="pj.company.companySocialWeb"><i class="fa fa-chrome"></i></a></span>
+		<span class="linkedin"><a href="pj.company.companySocialLink"><i class="fa fa-linkedin-square"></i></a></span>
+	</div>
+
+	<div class="highlightedDetails">
+		<span class="jobDesc">{{pj.job.title}}</span>
+		<span class="symbol">@</span>
+		<span class="jobLocation">{{pj.job.location}}</span>
+	</div>
+
+	<div class="indAndTeam">
+		<div class="industry">
+			<span class="label">INDUSTRY</span>
+			<span class="value">{{pj.company.companyIndustry}}</span>
+		</div>
+		<div class="teamSize">
+			<span class="label">TEAM SIZE</span>
+			<span class="teamSize">10000+</span>
+		</div>
+	</div>
+
+	<div class="fundingInfo">
+		<span class="label">Funding</span>
+		<span class="value">{{pj.company.companyFundingLevel}} - ${{pj.company.companyFundingAmount}}</span>
+	</div>
+
+	<div class="buttonsToTriggerPopup">
+		<button class="interested">Interested</button>
+		<button class="notInterested">Not Interested</button>
+	</div>
+</aside>
+
+<section class="opportunityDescription">
+
+	<section class="headlinespan">
+	<div class="content">
+		<div class="contentArea">
+			<h1>Opportunity Details</h1>
+		</div>
+		</div>
+	</section>
+
+	<section class="excerptWrap">
+	<div class="content">
+		<p class="noMargin">{{pj.company.companyName}}, a company that is creating outstanding retail 
+experiences, is looking for a
+<span class="job">{{pj.job.title}}</span></p>
+<!-- <p>with about <span class="workEx">2 - 4 year(s)</span> of relevant work experience.</p> -->
+
+
+<p>for location <span class="jobLocation">{{pj.job.location}}</span>.</p>
+</div>
+	</section>
+	
+
+	<section class="skillsInfo">
+		<div class="sectionHead">
+			<span>SKILLS REQUIRED</span>
+		</div>
+		<div class="content">
+			<ul class="skillsRating">
+		<li ng-repeat="skill in pj.job.skillsToDisplay">
+			<div class="skill_wrap">
+				<label for="">{{skill.skill}}</label>
+				<div class="meterWrap">
+					<div class="meter">
+						<div ng-class="rating">
+							
+						</div>
+					</div>
+					<span class="rating">{{skill.rating}}</span>
+				</div>
+				
+			</div>
+		</li>
+	</ul>
+		</div>
+	</section>
+	
+	<section class="CtcEquityInfo">
+		<div class="content">
+		<div class="ctc">
+			<span class="head">ctc</span>
+			<div class="figureStrap">
+				<span class="min">{{pj.job.ctcMin}}</span>
+				<span class="sep"></span>
+				<span class="max">{{pj.job.ctcMax}}</span>
+			</div>
+		</div>
+		<div class="bigSep"></div>
+		<div class="equity">
+			<span class="head">Equity</span>
+			<div class="figureStrap">
+				<span class="min">{{pj.job.equityMin}}</span>
+				<span class="sep"></span>
+				<span class="max">{{pj.job.equityMax}}</span>
+			</div>
+		</div>
+		</div>
+	</section>
+	
+	<section class="aboutProduct">
+		<div class="sectionHead">
+		<span>ABOUT THE PRODUCT</span>
+		</div>
+		<div class="content">
+			{{pj.job.aboutProduct}}
+		</div>
+	</section>
+
+	<section class="problemSolving">
+		<div class="sectionHead">
+		<span>PROBLEM SOLVING</span>
+		</div>
+
+		<div class="content">
+
+			<div class="skillToExpand" ng-repeat="area in pj.job.areaToContribute">
+				<h3 class="heading"><i class="icon"></i>{{area}}</h3>
+				<!-- <span class="tagline">this is tagline desc job</span> -->
+			</div>
+
+		</div>
+	</section>
+	
+	<section class="growthInSkills">
+		<div class="content">
+			<div class="sectionHead">
+		<span>GROWTH IN SKILLS</span>
+		</div>
+		<h5 class="section_tagline">Skills that you can learn while working with us</h5>
+		<div class="skillsDisplay">
+			<ul>
+				<li>
+					<span class="boldHead">J</span>
+					<span class="skillText">Javascript Frameworks</span>
+				</li>
+				<li>
+					<span class="boldHead">P</span>
+					<span class="skillText">Python</span>
+				</li>
+				<li>
+					<span class="boldHead">G</span>
+					<span class="skillText">Git Environment</span>
+				</li>
+			</ul>
+		</div>
+		</div>
+		
+	</section>
+
+<section class="likely_team">
+<div class="sectionHead">
+		<span>YOUR LIKELY TEAM</span>
+		</div>
+	<div class="content">
+
+		<div class="team">
+			<div class="avatar">
+				<img src="http://lorempixel.com/400/200/" alt="">
+			</div>
+			<div class="text">
+				<p class="name">{{pj.job.name1}}</p>
+				<p class="desg">{{pj.job.des1}}</p>
+			</div>
+		</div>
+		<div class="team">
+			<div class="avatar">
+				<img src="http://lorempixel.com/400/200/" alt="">
+			</div>
+			<div class="text">
+				<p class="name">{{pj.job.name2}}</p>
+				<p class="desg">{{pj.job.des2}}</p>
+			</div>
+		</div>
+	</div>
+</section>
+	<section class="aboutCompnay">
+		<div class="sectionHead">
+		<span>About The Company</span>
+		</div>
+		<div class="content">
+			{{pj.company.companyAbout}}
+		</div>
+	</section>	
+
+		<section class="leadership">
+			<div class="sectionHead"><span>Our Leadership</span></div>
+
+		<div class="content">
+
+			<div class="personWrap">
+				<figure>
+					<img src="http://lorempixel.com/400/200/" alt="">
+				</figure>
+				<div class="aboutPerson">
+					<span class="name">{{pj.company.companyTeamName1}}</span>
+					<span class="desc">{{pj.company.companyTeamDesignation1}}</span>
+					<div class="socialPresence"><i class="fa fa-linkedin-square"></i></div>
+
+					<div class="profileExcerpt">
+						<span>Worked at</span>
+						<span>Studied at</span>
+					</div>
+				</div>
+			</div>
+
+				<div class="personWrap">
+				<figure>
+					<img src="http://lorempixel.com/400/200/" alt="">
+				</figure>
+				<div class="aboutPerson">
+					<span class="name">{{pj.company.companyTeamName2}}</span>
+					<span class="desc">{{pj.company.companyTeamDesignation2}}</span>
+					<div class="socialPresence"><i class="fa fa-linkedin-square"></i></div>
+
+					<div class="profileExcerpt">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	
+
+	<section class="officeSpace">
+		<div class="sectionHead">
+			<span>Our Battleground</span>
+		</div>
+		<div class="imgWrap">
+			<img src="http://lorempixel.com/400/200/" alt="">
+			<img src="http://lorempixel.com/400/200/" alt="">
+			<img src="http://lorempixel.com/400/200/" alt="">
+		</div>
+	</section>
+</section>

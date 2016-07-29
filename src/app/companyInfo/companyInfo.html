@@ -1,0 +1,226 @@
+{{cic.company.company_id}}
+
+
+<div class="companyInfoFirstTimeBody">
+
+     <div class="headerForCompany">
+            XLOTT
+    </div>
+    
+    <div class="jobInformationStructure">
+
+        <div class="companyInfoFirstPageHeader">
+    
+            Company Information
+        
+        </div>
+    
+        <div class="instructionsForCompany">
+            One time entry only.
+            <br>
+            By filling this completely, your company's Job become 40% more attractive for candidates
+        </div>
+        
+        <!-- Add company logo image upload -->
+        
+        <section class="infoInputStack">
+             <md-input-container>
+            <label class="labelClass"><span class="mandatoryFieldStar"> * </span>Company Name</label>
+            <input ng-model="cic.company.companyName">
+          </md-input-container>
+        </section>
+
+
+         <section class="infoInputStack">   
+            <md-input-container>
+            <label class="labelClass">Company Tagline</label>
+            <input ng-model="cic.company.companyTagline">
+             </md-input-container></section>
+
+
+        <section class="infoInputStack">
+          <md-input-container class="md-block">
+          <label class="labelClass"><span class="mandatoryFieldStar"> * </span>About Your Company</label>
+          <textarea ng-model="cic.company.companyAbout" columns="1" md-maxlength="500" rows="5"></textarea>
+        </md-input-container></section>
+
+        <section class="infoInputStack customMod">
+
+        <md-input-container>
+        <label class="labelClass">The Industry</label>
+        <input ng-model="cic.company.companyIndustry">
+        </md-input-container>
+        </section>
+
+        <section class="infoInputStack">
+        <!-- <label class="labelClass">Company Strength</label> -->
+        <company-strength company="cic.company"></company-strength>
+        </section>
+
+        <div class="companyLabel">
+        
+            Social links to your company
+        </div>
+        
+        <section class="infoInputStack social_links" ng-model="cic.social">
+
+         <md-input-container class="withIcon">
+           <div class="inputWrap">
+             <label class="labelClass">Angel List</label>
+            <input ng-model="cic.company.companySocialFb">
+            <i class="fa fa-angellist"></i>
+           </div>
+           
+        </md-input-container>
+
+        <md-input-container class="withIcon">
+        <label class="labelClass">Linkedin url</label>
+        <input ng-model="cic.company.companySocialLinkedin">
+         <i class="fa fa-angellist"></i>
+        </md-input-container>
+
+        <md-input-container class="withIcon">
+        <label class="labelClass">Website Url</label>
+        <input ng-model="cic.company.companySocialWeb">
+         <i class="fa fa-angellist"></i>
+        </md-input-container>
+
+        </section>
+
+
+        <section class="infoInputStack funding_details">
+
+          <div class="companyLabel">Funding received by your Company</div>
+
+          <div class="choice">
+
+          <div class="optionBox">
+             <input type="radio" id="angel" name="funding" ng-model="cic.company.companyFundingLevel" value="angel" />
+             <label for="angel">Angel</label>
+          </div>
+          
+            <div class="optionBox">
+            <input type="radio" id="psa" name="funding" ng-model="cic.company.companyFundingLevel" value="psa"/>
+            <label for="psa">Pre Series A</label>
+            </div>
+
+           <div class="optionBox">
+            <input type="radio" id="sa" name="funding" ng-model="cic.company.companyFundingLevel" value="SA"/>
+            <label for="sa">Series A</label>
+            </div>
+
+            <div class="optionBox">
+            <input type="radio" id="sb" name="funding" ng-model="cic.company.companyFundingLevel" value="SB"/>
+            <label for="sb">Series B</label>
+            </div>
+
+            <div class="optionBox">
+            <input type="radio" id="asb" name="funding" ng-model="cic.company.companyFundingLevel" value="asb"/>
+            <label for="asb">Above Series B</label>
+            </div>
+
+           <!--  <div class="others_block">
+            <span class="rep_text">Others</span>
+              <ul class="subdrop">
+               <li><input type="radio" id="two" name="funding" ng-model="cic.company.companyFundingLevel" value="SD" /><label for="two">Series D</label></li>
+               <li><input type="radio" id="two" name="funding" ng-model="cic.company.companyFundingLevel" value="SE"/><label for="two">Series E</label></li>
+               <li><input type="radio" id="two" name="funding" ng-model="cic.company.companyFundingLevel" value="SF"/><label for="two">Series F</label></li>
+             </ul>
+           </div> -->
+
+
+         </div>
+
+         <div class="amount_slab">
+
+          <currency company="cic.company"></currency>
+
+          <md-input-container> <label class="labelClass">funding amount(example: 2 million)</label> <input ng-model="cic.company.companyFundingAmount"></md-input-container>
+
+        </div>
+
+        </section>
+        <div class="companyLabel"> A team member's details preferrably CEO</div>
+            
+        <section class="infoInputStack memeberDetailsStack">
+
+          <div class="subsection personFlex person1">
+            <div class="avatar">
+              <img src="" alt="">
+            </div>
+            <div class="detailsWrap">
+              <md-input-container class="labelIsPlaceholder">
+        <label>Name</label>
+        <input ng-model="cic.company.companyTeamName1">
+        </md-input-container>
+        <md-input-container>
+        <label class="labelClass">Designation</label>
+        <input ng-model="cic.company.companyTeamDesignation1">
+        </md-input-container>
+        <md-input-container>
+        <label class="labelClass">Linkedin url of a person</label>
+        <input ng-model="cic.company.companyTeamSocial1">
+        </md-input-container>
+        <md-input-container>
+        <label class="labelClass">Worked Previously at</label>
+        <input ng-model="cic.company.companyTeamWorkPrev1">
+        </md-input-container>
+        <md-input-container>
+        <label class="labelClass">Studied at</label>
+        <input ng-model="cic.company.companyTeamEdu1">
+        </md-input-container>
+            </div>
+          </div>
+            
+            
+        <div class="companyLabel">Another top team member's details</div>
+          <div class="personFlex person2">
+
+        <div class="avatar">
+          <img src="" alt="">
+        </div>
+        
+        <div class="detailsWrap">
+          <md-input-container>
+        <label class="labelClass">Name</label>
+        
+        <input ng-model="cic.company.companyTeamName2">
+        </md-input-container>
+        <md-input-container>
+        <label class="labelClass">Designation</label>
+        <input ng-model="cic.company.companyTeamDesignation2">
+        </md-input-container>
+        <md-input-container>
+        <label class="labelClass">Linkedin url of a person</label>
+        <input ng-model="cic.company.companyTeamSocial2">
+        </md-input-container>
+        <md-input-container>
+        <label class="labelClass">Worked Previously at</label>
+        <input ng-model="cic.company.companyTeamWorkPrev2">
+        </md-input-container>
+        <md-input-container>
+        <label class="labelClass">Studied at</label>
+        <input ng-model="cic.company.companyTeamEdu2">
+        </md-input-container>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="infoInputStack workspace_pics">
+          <div class="companyLabel">Office - Workspace Pics</div>
+          <span class="instructionsForCompany">size limit per photo - 5 mb, preferrably of size 1200 x 900</span>
+        </section>
+
+        <div class="button_wrap">
+            <button class="save outline">Save</button>
+            <button class="ok mod" ng-click="cic.saveCompanyDetails(cic.company)">Ok, Done</button>
+        </div>
+    </div>
+    
+    <div class="footerClass">
+    
+        copyright xlott 2016
+        
+    </div>
+</div>

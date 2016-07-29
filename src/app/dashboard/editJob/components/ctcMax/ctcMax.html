@@ -1,0 +1,21 @@
+
+  <md-content class="md-padding">
+          <md-autocomplete 
+        
+            md-search-text="ej.editjob.ctcMax"
+            md-selected-item-change="selectedCtcChange(package)" 
+            md-items="package in ctcStack" 
+            md-item-text="ej.editjob.ctcMax"
+            md-min-length="0" 
+            placeholder="ctc Maximum">
+
+            <md-item-template>
+              <span md-highlight-text="searchText" md-highlight-flags="^i">
+    {{package.display}}</span>
+            </md-item-template>
+      </md-autocomplete>
+
+
+  </md-content>
+
+

@@ -1,0 +1,27 @@
+
+
+
+<div class="loginWrap">
+<h1>Login Here</h1>
+	<div class="fieldset">
+		
+
+		 <md-input-container>
+   			<label>Email</label>
+        <input ng-model="lc.user.email">
+      </md-input-container>
+
+
+	</div>
+
+	<div class="fieldset">
+		
+
+			 <md-input-container>
+   			<label>Password</label>
+        <input ng-model="lc.user.password">
+      </md-input-container>
+	</div>
+
+	<button class="submitButton" type="submit" ng-click="lc.validateUser(lc.user)">Login</button>
+</div>

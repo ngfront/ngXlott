@@ -1,0 +1,25 @@
+<section class="profileSwitcher">
+	<ul>
+		<li ng-click="migrateToTotalProfiles()">{{total_profiles}} profiles</li>
+		<li ng-click="displayShortlistedProfiles()">{{shortlistedProfilesCount}} shortlisted</li>
+	</ul>
+</section>
+
+
+<section class="profileRoll">
+
+ 	<a ng-repeat = "profile in profiles" ng-click="onProfileSelect(profile.id)"
+ 		class="profile_card" ng-repeat="profile in profileWrap" 
+ 		>
+ 		<div class="avatar_block">
+ 			<img ng-src="{{profile.avatar}}" alt="">
+ 		</div>
+ 		<div class="userInfo_block">
+ 			<h3>{{profile.name}}</h3>
+ 			<span class="meta">{{profile.location}}</span>
+ 			<p class="profile_excerpt">{{profile.about_excerpt}}</p>
+ 		</div>
+ 		
+ 	</a>
+ </section>
+ 

@@ -1,0 +1,174 @@
+<!-- cjc module -->
+<section class="JobWrapper">
+
+<!-- Create Job Begins -->
+<section class="createJob">
+	
+<h1>Create Job</h1>
+<section class="infoInputStack looking_for">
+	
+	<md-input-container class="labelIsPlace">
+	<label><span class="requiredSign">*</span>I am looking for a</label>
+
+	<!-- <div class="requiredContainer"> -->
+	
+		<input name="profile" ng-model="cjc.job.title">
+	<!-- </div> -->
+	
+        <!-- show an error if this isn't filled in -->
+
+
+</md-input-container>
+
+</section>
+
+<section class="infoInputStack location requiredDrop">
+<!-- <label for="" class="required">At</label> -->
+<div class="requiredContainer">
+	<span class="requiredSign">*</span>
+	<select-location job="cjc.job"></select-location>
+	</div>
+</section>
+
+
+<section class="infoInputStack skills_rate reqChip">
+<!-- <label for="" class="required">With Skills</label>-->	
+<div class="requiredContainer">
+	<span class="requiredSign">*</span>
+<select-skills job="cjc.job"></select-skills>
+</div>
+</section>
+
+<section class="infoInputStack CTC_slab">
+	<h4>CTC( In INR - )</h4>
+	<div class="flex_baby drops">
+		<ctc-min job="cjc.job"></ctc-min>
+		<div class="sep"></div>
+		<ctc-max job="cjc.job"></ctc-max>
+	</div>
+</section>
+
+<section class="infoInputStack Equity">
+	<h4>Equity(In %age)</h4>
+	<div class="flex_baby drops">
+		<eq-min job="cjc.job"></eq-min>
+		<div class="sep"></div>
+		<eq-max job="cjc.job"></eq-max>
+	</div>
+</section>
+
+<section class="infoInputStack AboutProduct">
+	<md-input-container class="md-block labelIsPlace">
+<!-- 	<label></label>
+ -->	<textarea ng-model="cjc.job.aboutProduct" columns="1" md-maxlength="150" rows="5" placeholder="About Your Product(pitch the product to the potential candidates)"></textarea>
+</md-input-container>
+</section>
+
+<section class="infoInputStack work_areas">
+	<h4>Areas where the Candidate will work or contribute</h4>
+
+	<li ng-repeat="area in cjc.areasToContribute">
+		<input id="{{area}}" type="checkbox" checklist-model="cjc.job.areaToContribute" checklist-value="area"> 
+		<label for="{{area}}">{{area}}</label>
+	</li>
+
+
+
+</section>
+
+<section class="infoInputStack can_grow">
+<!-- 	<h4>Can grow in skills</h4>
+ -->	<growth-skill job="cjc.job"></growth-skill>	
+</section>
+
+<section class="infoInputStack likely_to">
+
+	<div class="subsection person">
+		<h4>Likely to work with(team member)</h4>
+
+		<div class="info_wrap">
+			<div class="gravatar"><img src="" alt=""></div>
+			<div class="info">
+		<md-input-container class="labelIsPlaceholder">
+		<label for="">name</label>
+	<input ng-model="cjc.job.name1">
+</md-input-container>
+
+			<md-input-container class="labelIsPlaceholder">
+			<label for="">designation</label>
+			<input ng-model="cjc.job.des1">
+		</md-input-container>
+	
+
+		</div>
+	</div>
+	</div>
+
+	<div class="subsection person">
+		<h4>Likely to work with(another team member)</h4>
+
+		<div class="info_wrap">
+			<div class="gravatar"></div>
+			<div class="info">
+		<md-input-container class="labelIsPlaceholder">
+		<label for="">name</label>
+	<input ng-model="cjc.job.name2">
+</md-input-container>
+
+			<md-input-container class="labelIsPlaceholder">
+			<label for="">designation</label>
+			<input ng-model="cjc.job.des2">
+		</md-input-container>
+	
+	
+		</div>
+	</div>
+	</div>
+
+
+
+
+</section>
+
+<section class="infoInputStack company_infoWrap">
+	<div class="leftWrap">
+		<h2>Company Information</h2>
+		<span class="small">One time entry only</span>
+		<span> Increases Job Attractivess by 40%</span>
+	</div>
+	<div class="rightWrap">
+		<div class="toggleArrow">
+			<i class="fa fa-angle-down"></i>
+		</div>
+	</div>
+</section>
+
+<section class="buttonSlab">
+	<div class="button_slab1">
+		<button class="save" ng-click="cjc.saveJobDetails(cjc.job)">Save</button>
+		<button class="save_search highlight" ng-click="cjc.saveAndTravel(cjc.job)">Save and Search</button>
+	</div>
+	<!-- <div class="button_slab2">
+		<button class="cancel">Cancel</button>
+	</div> -->
+</section>
+
+
+</section>
+<!-- Create Job Ends -->
+
+<aside class="job_attractiveness">
+	<ul>
+		<li>
+			<div class="jobAttra">
+				<span>Job Attractivess Meter</span>
+				<span class="assistline">Click here to see and example of <strong>100% attractive jobs</strong></span>
+			</div>
+		</li>
+		<li><i class="fa fa-eye"></i>Preview Job</li>
+		<li><i class="fa fa-link"></i>Copy Job Link</li>
+	</ul>
+</aside>
+
+
+</section>

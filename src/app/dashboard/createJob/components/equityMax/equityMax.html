@@ -1,0 +1,23 @@
+<div layout="column" ng-cloak="" class="autocompletedemoBasicUsage dropWithIcon">
+<md-content>
+          <md-autocomplete 
+            md-selected-item="eqmax.selectedItem" 
+            md-search-text-change="eqmax.searchTextChange(eqmax.searchText)" 
+            md-search-text="eqmax.searchText" 
+            md-selected-item-change="eqmax.selectedEquityChange(equity)" 
+            md-items="equity in eqmax.EquityStack" 
+            md-item-text="equity.display"
+            md-min-length="0" 
+            placeholder="Equity Minimum">
+
+            <md-item-template>
+              <span md-highlight-text="eqmax.searchText" md-highlight-flags="^i">{{equity.display}}</span>
+            </md-item-template>
+      </md-autocomplete>
+<span class="iconWrap">
+    <i class="fa fa-angle-down"></i>
+  </span>
+
+  </md-content>
+  </div>
+

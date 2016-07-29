@@ -1,0 +1,18 @@
+<md-content class="md-padding">
+          <md-autocomplete 
+          
+            md-search-text="ej.editjob.equityMax" 
+            md-selected-item-change="selectedEquityChange(equity)" 
+            md-items="equity in EquityStack" 
+            md-item-text="ej.editjob.equityMax"
+            md-min-length="0" 
+            placeholder="Equity Maximum">
+
+            <md-item-template>
+              <span md-highlight-text="searchText" md-highlight-flags="^i">{{equity.display}}</span>
+            </md-item-template>
+      </md-autocomplete>
+
+
+  </md-content>
+

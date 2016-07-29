@@ -1,0 +1,97 @@
+<!-- dc -->
+<div class="parent container">
+	<div class="content_box">
+		
+		<!-- Left Wing Main Nav -->
+		<div class="MainNav">
+			<nav>
+				<ul>
+					<li>
+						<div class="interaction_block" ui-sref="dashboard.home">
+							<i class="fa fa-home"></i>
+							<span class="test">Home</span>
+						</div>
+					</li>
+					<li>
+						<div class="interaction_block primehome" ui-sref="dashboard.home">
+							<i class="fa fa-home"></i>
+							<span class="test">Home</span>
+						</div>
+					</li>
+					<li>
+						<div class="interaction_block listJobs" ui-sref="dashboard.jobs({ company_id: dc.companyId })" ng-click="dc.takeSecNavFromAshes()">
+							<i class="fa fa-briefcase"></i>
+							<span class="test">Jobs</span>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Left Wing Main Nav ENDS -->
+		
+		<!-- Right Wing Main Content -->
+		<div class="MainContent">
+			<!-- Main Search Header -->
+			<header class="searchHeader">
+				<div class="hugeSearch">
+					
+					
+					<!-- Search Bar Starts Here -->
+    <md-chips 
+      ng-model="dc.selectedSkills" 
+      md-autocomplete-snap="" 
+      md-transform-chip="dc.transformChip($chip)"
+      md-on-remove="dc.removeSkill($chip)"
+      >
+
+      <md-autocomplete 
+        md-selected-item="dc.selectedItem" 
+        md-search-text="dc.searchSkill" 
+        md-items="skill in dc.skills | filter:dc.searchSkill" 
+        md-item-text="skill.display" 
+        placeholder="Enter Skills to Search Profiles">
+          <span md-highlight-text="ss.searchSkill">{{skill.display}}</span>
+      </md-autocomplete>
+      <md-chip-template>
+        <span>
+          <strong>{{$chip.display}}</strong>
+          
+        </span>
+      </md-chip-template>
+
+      <i class="fa fa-search"></i>
+    </md-chips>
+
+		<!-- Search Bar Ends Here -->
+	</div>
+	<div class="buttonWrap">
+
+		<button class="createJobButton">
+			Create Job
+		</button>
+
+		<div class="avatarWrap">
+			<i class=""></i>
+			<ul class="companyDrop">
+				<li>My Profile</li>
+				<li>Company Information</li>
+				<li class="Topsep">Change Password</li>
+				<li>Logout</li>
+			</ul>
+		</div>
+
+	</div>
+</header>
+<!-- Huge View Divides into Two -->
+<section class="viewPane">
+
+	<!-- Loads Home and Jobs Child View -->
+
+	<div class="primaryInteractionArea" ui-view></div>
+
+
+</section>
+</div>
+<!-- Right Wing Main Content -->
+</div>
+</div>

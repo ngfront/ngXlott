@@ -1,0 +1,29 @@
+<md-content class="md-padding">
+<div class="requiredContainer">
+  <span class="requiredSign">*</span>
+          <md-autocomplete required md-input-name="locationField"
+            md-selected-item="ej.editjob.location" 
+             
+            md-search-text="newLocation" 
+            md-selected-item-change="selectedLocationChange(newLocation)" 
+            md-items="location in locations | filter:newLocation" 
+            md-item-text="job.location" 
+            md-min-length="0" 
+            placeholder="Location">
+            
+            <md-item-template>
+              <span md-highlight-text="searchText" md-highlight-flags="^i">{{location.display}}</span>
+            </md-item-template>
+
+
+           {{location.display}}
+      
+
+      </md-autocomplete>
+</div>
+
+  </md-content>
+
+
+
+

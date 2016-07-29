@@ -1,0 +1,82 @@
+<!--Filters start -->
+
+<div class="notificationBar">
+	<p>You can attract potential candidates better if you <a href="#" ng-click="sp.redirectToCreateJob()">create a job</a> from this skill search</p>
+</div>
+
+<div class="headline_wrap">
+	<h1>Search Results</h1>
+	<div class="filters_anchor" ng-click="sp.toggleFilters()">Filter Results<i class="fa fa-angle-down"></i></div>
+</div>
+
+
+<div class="filtersWrap" ng-show="sp.showFilters">
+
+<form name="filtersForm">
+	<div class="filters">
+		<div class="locationFilters">
+			<label for="">FILTER BY LOCATION</label>
+
+<ul class="inputStand">
+	<li ng-repeat="location in sp.locationsForFilter">
+		<input id="{{location}}" type="checkbox" checklist-model="sp.filters.location" checklist-value="location"> 
+		<label for="{{location}}">{{location}}</label>
+	</li>
+</ul>
+		</div>
+
+		<div class="skillStrengthFilters">
+			<label for="">FILTER BY SKILL STRENGTH</label>
+			
+			<ul>
+				<li ng-repeat="skill in sp.skillsForFilter">
+
+					<label for="">{{skill.display}}</label>
+					<div class="range-slider">
+    					<input class="input-range" type="range" value="sp.skill.score" min="1" max="5" ng-model="skill.score">
+    					<span class="range-value" ng-model="skill.score">{{skill.score}}</span>
+					</div> 
+				</li>
+			</ul>
+
+
+
+		</div>
+	</div>
+	<div class="buttonWrap">
+		<button class="filter" ng-click="sp.filterResults()">Filter</button>
+	</div>
+	</form>
+</div>
+
+
+
+
+<section class="profileSwitcher">
+	<ul>
+		<li ng-click="sp.displayAllProfiles()"><span class="highlight">{{sp.totalProfileCount}}</span> profiles</li>
+		<li ng-click="sp.displayShortlistedProfiles()"><span class="highlight"></span>{{sp.profiles_shortlisted}} shortlisted</li>
+	</ul>
+</section>
+
+
+ <section class="profileRoll">
+
+
+<!-- <job-card class="job_Card" ng-repeat="job in cj.jobsList"></job-card>
+ -->
+<h1>All Profiles</h1>
+<profile-card ng-repeat="profile in sp.profileWrap"></profile-card>
+
+ 	
+<button class="loadMore" ng-click="sp.loadMoreProfiles()">Load More Profiles</button>
+ </section>
+
+<!-- <div ui-view></div> -->
+
+<!--this goes on anchor tag
+ -->
+
+
+
+  

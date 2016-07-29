@@ -1,0 +1,32 @@
+
+
+
+ <md-chips 
+      ng-model="gs.selectedSkills" 
+      md-autocomplete-snap="" 
+      md-transform-chip="gs.transformChip($chip)" 
+      >
+
+      <md-autocomplete 
+        md-selected-item="gs.selectedItem" 
+        md-search-text="gs.searchSkill" 
+        md-items="skill in gs.skills | filter:gs.searchSkill" 
+        md-item-text="skill.display" 
+        placeholder="Enter Technical Skills that a Candidate can learn">
+          <span md-highlight-text="gs.searchSkill">{{skill.display}}</span>
+      </md-autocomplete>
+      <md-chip-template>
+        <span>
+          <strong>{{$chip.display}}</strong>
+          
+        </span>
+      </md-chip-template>
+    </md-chips>
+
+    
+
+  </md-content>
+
+
+
+

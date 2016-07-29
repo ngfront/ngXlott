@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Dev</title>
+  
+  <!-- build:css styles/lib.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../bower_components/toastr/toastr.css" />
+  <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+	
+  <!-- build:css(./) styles/app.css -->
+	<!-- inject:css -->
+	<link rel="stylesheet" href="/temp/app.css">
+	<!-- endinject -->
+  <!--endbuild-->
+  
+</head>
+<body>
+
+  <header></header>
+  <div class="container" ui-view></div>
+  <footer></footer>
+   
+
+  <!-- build:js js/lib.js -->
+   <!-- bower:js -->
+   <script src="../bower_components/angular/angular.js"></script>
+   <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+   <script src="../bower_components/jquery/dist/jquery.js"></script>
+   <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+   <script src="../bower_components/toastr/toastr.js"></script>
+   <script src="../bower_components/angular-animate/angular-animate.js"></script>
+   <script src="../bower_components/angular-aria/angular-aria.js"></script>
+   <script src="../bower_components/angular-messages/angular-messages.js"></script>
+   <script src="../bower_components/angular-material/angular-material.js"></script>
+   <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+   <script src="../bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+   <script src="../bower_components/angular-click-outside/clickoutside.directive.js"></script>
+   <!-- endbower -->
+	 <!-- endbuild -->
+   
+   <!-- build:js(./) js/app.js -->
+   <!-- inject:js -->
+   <script src="/src/app/app.module.js"></script>
+   <script src="/src/app/companyInfo/companyInfo.module.js"></script>
+   <script src="/src/app/core/checkbox-helper.module.js"></script>
+   <script src="/src/app/core/constants.module.js"></script>
+   <script src="/src/app/core/core.module.js"></script>
+   <script src="/src/app/core/router.module.js"></script>
+   <script src="/src/app/dashboard/dashboard.module.js"></script>
+   <script src="/src/app/dataServices/dataService.module.js"></script>
+   <script src="/src/app/login/login.module.js"></script>
+   <script src="/src/app/widgets/widgets.module.js"></script>
+   <script src="/src/app/dashboard/ProfileViewShortlisted/ProfileViewShortlisted.module.js"></script>
+   <script src="/src/app/dashboard/ProfileView/ProfileView.module.js"></script>
+   <script src="/src/app/dashboard/ProfilesForCreatedJob/ProfilesForCreatedJob.module.js"></script>
+   <script src="/src/app/dashboard/ProfilesShortlisted/ProfilesShortlisted.module.js"></script>
+   <script src="/src/app/dashboard/createJob/createJob.module.js"></script>
+   <script src="/src/app/dashboard/editJob/editJob.module.js"></script>
+   <script src="/src/app/dashboard/home/dashboard.module.js"></script>
+   <script src="/src/app/dashboard/jobs/CreatedJobs.module.js"></script>
+   <script src="/src/app/dashboard/previewJob/previewJob.module.js"></script>
+   <script src="/src/app/dashboard/profileViewViaSkillSearch/profileViewViaSkillSearch.module.js"></script>
+   <script src="/src/app/dashboard/searchedProfiles/searchedProfiles.module.js"></script>
+   <script src="/src/app/dashboard/searchedProfilesShortlisted/searchedShortlisted.module.js"></script>
+   <script src="/src/app/dashboard/shortlistedProfileViewViaSearch/shortlistedProfileViewViaSearch.module.js"></script>
+   <script src="/src/app/widgets/profileCard/profileCard.module.js"></script>
+   <script src="/src/app/widgets/jobCard/jobCard.module.js"></script>
+   <script src="/src/app/companyInfo/components/companyStrength/companyStrength.module.js"></script>
+   <script src="/src/app/companyInfo/components/currency/currency.module.js"></script>
+   <script src="/src/app/dashboard/createJob/components/ctcMax/ctcMax.module.js"></script>
+   <script src="/src/app/dashboard/createJob/components/ctcMin/ctcMin.module.js"></script>
+   <script src="/src/app/dashboard/createJob/components/equityMax/equityMax.module.js"></script>
+   <script src="/src/app/dashboard/createJob/components/equityMin/equityMin.module.js"></script>
+   <script src="/src/app/dashboard/createJob/components/growthSkill/growthSkill.module.js"></script>
+   <script src="/src/app/dashboard/createJob/components/locationSelection/locationSelection.module.js"></script>
+   <script src="/src/app/dashboard/createJob/components/selectSkills/selectSkills.module.js"></script>
+   <script src="/src/app/dashboard/editJob/components/ctcMax/ctcMax.module.js"></script>
+   <script src="/src/app/dashboard/editJob/components/ctcMin/ctcMin.module.js"></script>
+   <script src="/src/app/dashboard/editJob/components/equityMax/equityMax.module.js"></script>
+   <script src="/src/app/dashboard/editJob/components/equityMin/equityMin.module.js"></script>
+   <script src="/src/app/dashboard/editJob/components/growthSkill/growthSkill.module.js"></script>
+   <script src="/src/app/dashboard/editJob/components/locationSelection/locationSelection.module.js"></script>
+   <script src="/src/app/dashboard/editJob/components/selectSkills/selectSkills.module.js"></script>
+   <script src="/src/app/companyInfo/companyInfo.controller.js"></script>
+   <script src="/src/app/dashboard/dashboard.controller.js"></script>
+   <script src="/src/app/dataServices/authService.js"></script>
+   <script src="/src/app/dataServices/companyService.js"></script>
+   <script src="/src/app/dataServices/genricFetchService.js"></script>
+   <script src="/src/app/dataServices/jobsService.js"></script>
+   <script src="/src/app/login/loginController.js"></script>
+   <script src="/src/app/dashboard/ProfileViewShortlisted/ProfileViewShortlistedController.js"></script>
+   <script src="/src/app/dashboard/ProfileView/ProfileViewController.js"></script>
+   <script src="/src/app/dashboard/ProfilesForCreatedJob/profilesForCreatedJob.js"></script>
+   <script src="/src/app/dashboard/ProfilesShortlisted/ProfilesShortlistedController.js"></script>
+   <script src="/src/app/dashboard/createJob/createJobController.js"></script>
+   <script src="/src/app/dashboard/editJob/editJobController.js"></script>
+   <script src="/src/app/dashboard/home/homeController.js"></script>
+   <script src="/src/app/dashboard/jobs/CreatedJobsController.js"></script>
+   <script src="/src/app/dashboard/previewJob/previewJobController.js"></script>
+   <script src="/src/app/dashboard/profileViewViaSkillSearch/profileViewViaSkillSearchController.js"></script>
+   <script src="/src/app/dashboard/searchedProfiles/searchedProfilesController.js"></script>
+   <script src="/src/app/dashboard/searchedProfilesShortlisted/searchedShortlistedController.js"></script>
+   <script src="/src/app/dashboard/shortlistedProfileViewViaSearch/shortlistedProfileViewViaSearch.js"></script>
+   <script src="/src/app/widgets/profileCard/profileCard.js"></script>
+   <script src="/src/app/widgets/jobCard/jobCard.js"></script>
+   <script src="/src/app/companyInfo/components/companyStrength/companyStrength.js"></script>
+   <script src="/src/app/companyInfo/components/currency/currency.js"></script>
+   <script src="/src/app/dashboard/createJob/components/ctcMax/ctcMax.js"></script>
+   <script src="/src/app/dashboard/createJob/components/ctcMin/ctcMin.js"></script>
+   <script src="/src/app/dashboard/createJob/components/equityMax/equityMax.js"></script>
+   <script src="/src/app/dashboard/createJob/components/equityMin/equityMin.js"></script>
+   <script src="/src/app/dashboard/createJob/components/growthSkill/growthSkill.js"></script>
+   <script src="/src/app/dashboard/createJob/components/locationSelection/locationSelection.js"></script>
+   <script src="/src/app/dashboard/createJob/components/selectSkills/selectSkills.js"></script>
+   <script src="/src/app/dashboard/editJob/components/ctcMax/ctcMax.js"></script>
+   <script src="/src/app/dashboard/editJob/components/ctcMin/ctcMin.js"></script>
+   <script src="/src/app/dashboard/editJob/components/equityMax/equityMax.js"></script>
+   <script src="/src/app/dashboard/editJob/components/equityMin/equityMin.js"></script>
+   <script src="/src/app/dashboard/editJob/components/growthSkill/growthSkill.js"></script>
+   <script src="/src/app/dashboard/editJob/components/locationSelection/editlocationSelection.js"></script>
+   <script src="/src/app/dashboard/editJob/components/selectSkills/selectSkills.js"></script>
+   <!-- endinject -->
+   
+    <!-- inject:templates:js -->
+    <!-- endinject -->
+
+  <!-- endbuild -->
+  
+</body>
+</html>

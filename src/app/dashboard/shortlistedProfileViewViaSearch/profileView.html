@@ -1,0 +1,112 @@
+<!--spv-->
+
+
+
+<div class="profileDetailshead">
+<i class="fa fa-angle-left" ng-click="spv.navigateBack()"></i><h1>Profile Details</h1>	
+</div>
+
+
+<section class="profileWraper">
+
+	<div class="introBand">
+		<div class="avatar_block">
+			<img ng-src="{{spv.profile.avatar}}" alt="">
+		</div>
+		<div class="meta_block">
+			<h3 class="profile_name">{{spv.profile.name}}</h3>
+			<p class="profile_location">{{spv.profile.location}}</p>
+			<p class="profile_social">
+				<a class="git" ng-href="{{spv.profile.social.git}}"><i class="fa fa-github"></i></a>
+				<a class="stack" ng-href="{{spv.profile.social.stack}}"><i class="fa fa-stack-overflow"></i></a>
+				<a class="web" ng-href="{{spv.profile.social.web}}"><i class="fa fa-chrome"></i> </a>
+			</p>
+		</div>
+		<div class="selectionControl_block">
+<!-- 			<a herf="emailto:steve@appl.com"><i class="fa fa-envelope-o"></i></a>
+ -->			
+ <a href="#" class="bookmark"><i class="fa fa-bookmark-o"></i></a>
+		</div>
+	</div>
+	
+	<div class="summary_section">
+		Lorem ipsum dolor sit amet, <span class="highlight">consectetur adipisicing</span>  elit. Distinctio quidem eaque <span class="highlight">consectetur adipisicing</span>impedit eos, a fugit
+	</div>
+
+	<div class="skills_section" ng-cloak>
+	<div class="sectionHead ">
+		<span>SKILLS</span>
+	</div>
+	<md-content>
+	<md-tabs md-dynamic-height md-border-bottom>
+
+	<md-tab ng-repeat="(skill, val) in spv.profile.skills" label="{{skill}}">
+
+	<md-content class="md-padding">     
+	<ul class="skillsRating">
+		<li ng-repeat="(skill, rating) in val">
+			<div class="skill_wrap">
+				<label for="">{{skill}}</label>
+				<div class="meterWrap">
+					<div class="meter">
+						<div ng-class="rating">
+							
+						</div>
+					</div>
+					<span class="rating">{{rating}}</span>
+				</div>
+				
+			</div>
+		</li>
+	</ul>
+</md-content>
+
+</md-tab>
+</md-tabs>
+</md-content>
+</div>
+
+<div class="codeSample_section" ng-cloak>
+<div class="sectionHead ">
+		<span>CODE SAMPLES</span>
+	</div>
+	<md-content>
+		<md-tabs md-dynamic-height md-border-bottom>
+			<md-tab ng-repeat="(skill, val) in spv.profile.code_samples" label="{{skill}}">
+				<md-content class="md-padding">     
+					<!-- Nested Tab starts -->
+					<md-content>
+						<md-tabs md-dynamic-height md-border-bottom>
+							<md-tab ng-repeat="(repo, info) in val" label="{{repo}}">
+
+								<md-content class="question_block" class="md-padding" ng-repeat="info in info">     
+									<!-- Repeater of Questions and Answers -->
+									<div class="question_card">
+									<div class="headlineWrap">
+										<h3 class="question">{{info.question}}</h3><span class="meta">
+											<span class="date">{{info.meta_data.date}}</span>
+										</span>		
+									</div>
+									<div class="answerExcerpt">
+										<p>{{info.answer}}</p>
+										<a ng-href="{{info.meta_data.link}}" class="linkToAnswer"></a>
+									</div>	
+	
+									</div>
+								</md-content>
+
+							</md-tab>
+						</md-tabs>
+					</md-content>
+					<!-- Nested Tab Ends -->
+				</md-content>
+			</md-tab>
+		</md-tabs>
+	</md-content>
+
+</div>
+</section>
+
+
+
+

@@ -1,0 +1,47 @@
+[
+{	"id": "17983574",
+	"name": "Chandler Bing",
+"avatar" : "src/images/avatar.jpg",
+	"location" : "Delhi India",
+	"about_excerpt" : "Could I be more any Sarcastic"
+}, 
+{	"id": "274346783534",
+	"name": "Joey Tribbiani",
+"avatar" : "src/images/avatar.jpg",
+	"location" : "Mumbai, India",
+	"about_excerpt" : "How you Doing!! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cupiditate, excepturi. Ullam quis animi deleniti alias, rem esse, ad natus debitis ipsam illo, commodi! Libero placeat blanditiis dolor amet dolore."
+}, 
+{	"id": "32342342",
+	"name": "Ross Gellar",
+"avatar" : "src/images/avatar.jpg",
+	"location" : "California, US",
+	"about_excerpt" : "Dinosour Lover is all about"
+},
+{	"id": "1792344574",
+	"name": "Charlie Sheen",
+"avatar" : "src/images/avatar.jpg",
+	"location" : "Delhi India",
+	"about_excerpt" : "Biwinning"
+}, 
+{	"id": "546547889445432",
+	"name": "Sheldon Cooper",
+"avatar" : "src/images/avatar.jpg",
+	"location" : "Mumbai, India",
+	"about_excerpt" : "Bazinga!!"
+}, 
+
+{	"id": "676456456456",
+	"name": "Phoebe Buffay",
+"avatar" : "src/images/avatar.jpg",
+	"location" : "California, US",
+	"about_excerpt" : "Hiipity Hoppyty Boo"
+},
+
+{	"id": "865456464564",
+	"name": "Rachel Green",
+"avatar" : "src/images/avatar.jpg",
+	"location" : "California, US",
+	"about_excerpt" : " Gossip Queen"
+}
+
+]

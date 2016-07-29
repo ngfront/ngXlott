@@ -1,0 +1,162 @@
+<!-- ej is controllerAs -->
+<section class="JobWrapper">
+
+<!-- Create Job Begins -->
+
+<section class="createJob">
+	
+<h1>Edit Job</h1>
+
+<section class="infoInputStack looking_for">
+	<md-input-container class="labelIsPlace">
+	<label>I am looking for a</label>
+	<div class="reditequiredContainer">
+	<span class="reditequiredSign">*</span>
+		<input name="profile" 
+        reditequired ng-model="ej.editjob.title">
+	</div>
+        
+</md-input-container>
+
+</section>
+
+
+<section class="infoInputStack location">
+<edit-location></edit-location>
+</section>
+
+
+<section class="infoInputStack skills_rate">
+<label for="" class="reditequired">With Skills</label>
+	<edit-skills job="ej.job"></edit-skills>
+</section>
+
+
+<section class="infoInputStack CTC_slab">
+	<h4>CTC would be in the range of</h4>
+	<div class="flex_baby drops">
+		<editctc-min job="ej.job"></editctc-min>
+		<div class="sep"></div>
+		<editctc-max job="ej.job"></editctc-max>
+	</div>
+</section>
+
+
+<section class="infoInputStack Equity">
+	<h4>Equity could be in the range of</h4>
+	<div class="flex_baby drops">
+		<editeq-min job="ej.job"></editeq-min>
+		<div class="sep"></div>
+		<editeq-max job="ej.job"></editeq-max>
+	</div>
+</section>
+
+
+<section class="infoInputStack AboutProduct">
+	<md-input-container class="md-block">
+	<label>About Your Product</label>
+	<textarea ng-model="ej.editjob.aboutProduct" columns="1" md-maxlength="150" rows="5" placeholder="pitch the product to the potential candidates"></textarea>
+</md-input-container>
+</section>
+
+
+<section class="infoInputStack work_areas">
+	<h4>Areas where the Candidate will work or contribute</h4>
+	<li ng-repeat="area in ej.areasToContribute">
+		<input id="{{area}}" type="checkbox" checklist-model="ej.editjob.areaToContribute" checklist-value="area"> 
+		<label for="{{area}}">{{area}}</label>
+	</li>
+
+</section>
+
+
+<section class="infoInputStack can_grow">
+	<h4>Can grow in skills</h4>
+	<editgrowth-skill job="ej.editjob"></editgrowth-skill>	
+</section>
+
+
+<section class="infoInputStack likely_to">
+
+	<div class="subsection person">
+		<h4>Likely to work with(team member)</h4>
+
+		<div class="info_wrap">
+			<div class="gravatar"><img src="" alt=""></div>
+			<div class="info">
+		<md-input-container class="labelIsPlaceholder">
+		<label for="">name</label>
+	<input ng-model="ej.editjob.name1">
+</md-input-container>
+
+			<md-input-container class="labelIsPlaceholder">
+			<label for="">designation</label>
+			<input ng-model="ej.editjob.des1">
+		</md-input-container>
+	
+
+		</div>
+	</div>
+	</div>
+
+	<div class="subsection person">
+		<h4>Likely to work with(team member)</h4>
+
+		<div class="info_wrap">
+			<div class="gravatar"></div>
+			<div class="info">
+		<md-input-container class="labelIsPlaceholder">
+		<label for="">name</label>
+	<input ng-model="ej.editjob.name2">
+</md-input-container>
+
+			<md-input-container class="labelIsPlaceholder">
+			<label for="">designation</label>
+			<input ng-model="ej.editjob.des2">
+		</md-input-container>
+	
+	
+		</div>
+	</div>
+	</div>
+
+
+
+
+</section>
+
+<!-- <section class="infoInputStack company_infoWrap">
+	<div class="leftWrap">
+		<h2>Company Information</h2>
+		<span class="small">One time entry only</span>
+		<span> Increases Job Attractivess by 40%</span>
+	</div>
+	<div class="rightWrap">
+		<div class="toggleArrow"></div>
+	</div>
+</section> -->
+
+<section class="buttonSlab">
+	<div class="button_slab1">
+		<button class="save" ng-click="ej.saveJobDetails(ej.editjob)">Save</button>
+		<button class="save_search highlight" ng-click="ej.saveAndTravel(ej.editjob)">Save and Search</button>
+	</div>
+<!-- 
+	<div class="button_slab2">
+		<button class="cancel">Cancel</button>
+	</div> -->
+	
+</section>
+
+
+</section>
+<!-- Create Job Ends -->
+
+<aside class="job_attractiveness">
+	
+</aside>
+
+
+</section>
+
+

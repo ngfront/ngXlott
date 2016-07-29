@@ -1,0 +1,32 @@
+<!-- <a class="job_Card" ng-repeat="job in jobsList"> 
+ -->	
+		<div class="aboutJobPane" ng-click="migrateToProfilesState(job.id, job.jobs_skills, job.location)">
+			<h3 class="job_name">{{job.title}}</h3>
+			<span class="job_location"><i class="fa fa-map-marker"></i>{{job.location}}</span>
+			<div class="shortlist_count"><span class="count">{{job.shortlisted}}</span><span class="static_text">shortlisted</span></div>
+		</div>
+
+		<div class="iconPane">
+
+			<div class="viewmore">
+				<span class="dots"></span>
+				<span class="dots"></span>
+				<span class="dots"></span>
+				<md-tooltip>Options</md-tooltip>
+			</div>
+
+			<div class="jobPanel">
+				<ul>
+					<li ng-click="editJob(job.id)"><i class="fa fa-pencil"></i><span class="act">Edit</span></li>
+					<li class="sepr" ng-click="deleteJob(job.id)"><i class="fa fa-trash"></i><span class="act">Delete</span></li>
+					<li ng-click="previewJob(job.id)"><i class="fa fa-eye"></i><span class="act">Preview Job</span></li>
+					<li ng-click="copyJob(job.id)"><i class="fa fa-link"></i><span class="act">Copy Job Link</span></li>
+				</ul>
+			</div>
+
+			<div class="viewcard">
+				<i class="fa fa-chevron-circle-right"></i>
+			</div>
+		</div>
+<!-- 	</a>
+ -->

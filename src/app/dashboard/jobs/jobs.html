@@ -1,0 +1,17 @@
+<div class="metaPane">
+<div class="headlineWrap">
+	<h1>Job List {{ cj.jobCount }}</h1>
+	<span class="add_Wrap"><i class="fa fa-plus-circle" ng-click="cj.TravelToCreateJobState()"><md-tooltip>Create Job</md-tooltip></i> </span>
+</div>
+
+<div class="jobRoll">
+	<!-- This will get Repeater ui-sref="dashboard.jobs.profiles({id: job.id, skills: job.jobs_skills})" -->
+
+	
+	
+	<job-card class="job_Card" ng-repeat="job in cj.jobsList | reverse"></job-card>
+
+</div>
+</div>
+
+<div class="detailedSearchPanel" ui-view></div>

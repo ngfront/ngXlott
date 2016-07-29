@@ -1,0 +1,255 @@
+{
+	"name": "Chandler Bing",
+	"location": "Tampa Florida, US",
+	"avatar": "src/images/avatar.jpg",
+	"social": {
+		"git": "git link here",
+		"stack": "stack link here",
+		"website": "website here"
+	},
+	"skills": {
+
+		"Web FrontEnd": {
+			"Html": "excellent",
+			"CSS": "Very Good",
+			"Javascript": "Fair"
+		},
+		"Web Backend": {
+			"Python": "Good"
+		},
+		"Emerging Skills" : {
+			"Machine Learning": "Good"
+		},
+		"Meta Skill 1" : {
+			"Skill Name": "excellent",
+			"Another Skill": "Fair",
+			"Fuck One More Skill" :  "excellent"
+		},
+		"Meta Skill 2" : {
+			"Skill Name 2": "excellent",
+			"Another Skill 2": "Fair",
+			"Fuck One More Skill 2" :  "excellent"
+		},
+		"Meta Skill 3" : {
+			"Skill Name 3": "excellent",
+			"Another Skill 3": "Fair",
+			"Fuck One More Skill 3" :  "excellent"
+		}
+
+	},
+
+	"skills": [
+		"html",
+		"javascript",
+		"css"
+	],
+
+	"sources": [
+	"github",
+	"Stackoverflow"
+	],
+
+	"projects": [
+	{
+		"a": 1,
+		"b": 2
+	},
+	{
+		"a": 2,
+		"b": 2
+	},
+	{
+		"a": 3,
+		"b": 4
+	},
+	{
+		"a": 8,
+		"b": 5
+	},
+	],
+
+	"code_samples": {
+		"html": {
+			"Stackoverflow": [{
+				"question": "This is Stack Question",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Stack Question 2",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Stack Question 3",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Stack Question 4",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}],
+			"Github": [{
+				"question": "This is Git Question",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Git Question 2",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Git Question 3",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Git Question 4",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}]
+		},
+		"CSS": {
+			"Stackoverflow": [{
+				"question": "This is Stack for CSS Question",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Stack for CSS Question 2",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Stack for CSS Question 3",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Stack for CSS Question 4",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}],
+			"Github": [{
+				"question": "This is Git for CSS Question",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Git for CSS Question 2",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Git for CSS Question 3",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Git for CSS Question 4",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}]
+		},
+		"Javascript": {
+			"Stackoverflow": [{
+				"question": "This is Stack for JAVASCRIPT Question",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Stack for JAVASCRIPT Question 2",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Stack for JAVASCRIPT Question 3",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Stack for JAVASCRIPT Question 4",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}],
+			"Github": [{
+				"question": "This is Git for JAVASCRIPT Question",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Git for JAVASCRIPT Question 2",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Git for JAVASCRIPT Question 3",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": " 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}, {
+				"question": "This is Git for JAVASCRIPT Question 4",
+				"meta_data": {
+					"date": "12-12-1989",
+					"link": "link to question"
+				},
+				"answer": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus qui ab officiis aliquid molestiae harum hic asperiores voluptas assumenda dolor, illo, aut enim ratione iusto a, possimus culpa eligendi."
+			}]
+		}
+
+	}
+
+}

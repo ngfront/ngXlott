@@ -1,0 +1,64 @@
+@include border-box-sizing;
+
+@mixin button($bg, $color, $border, $brds){
+	border: 1px solid $border;
+	background:$bg;
+	color: $color;
+	border-radius: $brds;
+}
+
+
+// @font-face {
+//     font-family: 'Icons';
+//     src:    url('../src/fonts/icons/xlott.eot?3idszs');
+//     src:    url('../src/fonts/icons/xlott.eot?3idszs#iefix') format('embedded-opentype'),
+//         url('../src/fonts/icons/xlott.ttf?3idszs') format('truetype'),
+//         url('../src/fonts/icons/xlott.woff?3idszs') format('woff'),
+//         url('../src/fonts/icons/xlott.svg?3idszs#xlott') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
+
+// // For adding font icons to elements using CSS pseudo-elements
+// // http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+// @mixin icon($position: before, $icon: false, $styles: true) {
+//     @if $position == both {
+//         $position: 'before, &:after';
+//     }
+//     // Either a :before or :after pseudo-element, or both, defaulting to :before
+//     &:#{$position} {
+//         @if $icon {
+//             // A particular icon has been specified
+//             content: "#{map-get($icons, $icon)}";
+//         }
+//         @if $styles {
+//             // Supportive icon styles required
+//             speak: none;
+//             font-style: normal;
+//             font-weight: normal;
+//             font-family: 'Icons';
+//         }
+//         // Include any extra rules supplied for the pseudo-element
+//         @content;
+//     }
+// }
+
+// [class^="icon-"], [class*=" icon-"] {
+//     /* use !important to prevent issues with browser extensions that change fonts */
+//     font-family: 'Icons' !important;
+//     speak: none;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-variant: normal;
+//     text-transform: none;
+//     line-height: 1;
+
+//     /* Better Font Rendering =========== */
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// }
+
+   
+//     

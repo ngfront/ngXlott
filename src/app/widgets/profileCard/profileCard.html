@@ -1,0 +1,23 @@
+
+ 		<div class="leftWrap" ng-click="onProfileSelect(profile.id)">
+ 			<div class="avatar_block">
+ 			<img ng-src="{{profile.avatar}}" alt="">
+ 		</div>
+ 		<div class="userInfo_block">
+ 			<h3>{{profile.name}}</h3>
+ 			<span class="meta">{{profile.location}}</span>
+ 			<p class="profile_excerpt">{{profile.about_excerpt}}</p>
+ 		</div>
+ 		</div>
+ 		
+ 		<div class="shortlist_block">
+ 			<i class="toShortlist fa fa-bookmark-o" ng-click="triggerProfileShortlist(profile.id)"><md-tooltip>Shortlist</md-tooltip></i>
+ 			<ul class="displayJobs">
+ 			<li class="head">Please selecet one Job</li>
+ 				<li ng-repeat="job in jobs" ng-click="shortlistProfile(job.id)">
+ 					{{job.title}}
+ 					
+ 				</li>
+ 			</ul>
+ 		</div>
+ 	

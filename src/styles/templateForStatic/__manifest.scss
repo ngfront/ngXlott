@@ -1,0 +1,15 @@
+@import '../base/__manifest';
+
+// Importing Mixins
+@import '../mixins/__manifest';
+
+// Importing Placeholders
+@import '../placeholders/__manifest';
+
+// Importing Generic Code
+@import 'generic';
+
+// Importing Header
+@import '../components/header';
+
+@import '../components/footer';

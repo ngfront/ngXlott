@@ -1,0 +1,86 @@
+<!-- pc -->
+<div class="headline_wrap">
+	<h1>Search Results</h1>
+	<div class="filters_anchor" ng-click="pc.toggleFilters()">Filter Results<i class="fa fa-angle-down forFilter"></i></div>
+</div>
+
+<!--Filters start -->
+
+<div class="filtersWrap" ng-show="pc.showFilters">
+
+<form name="filtersForm">
+	<div class="filters">
+		<div class="locationFilters">
+			<label for="">FILTER BY LOCATION</label>
+
+<ul class="inputStand">
+	<li ng-repeat="location in pc.locationsForFilter">
+		<input id="{{location}}" type="checkbox" checklist-model="pc.filters.location" checklist-value="location"> 
+		<label for="{{location}}">{{location}}</label>
+	</li>
+</ul>
+		</div>
+
+		<div class="skillStrengthFilters">
+			<label for="">FILTER BY SKILL STRENGTH</label>
+			
+			<ul>
+				<li ng-repeat="skill in pc.skillsForFilter">
+
+					<label for="">{{skill.display}}</label>
+					<div class="range-slider">
+    					<input class="input-range" type="range" value="pc.skill.score" min="1" max="5" ng-model="skill.score">
+    					<span class="range-value" ng-model="skill.score">{{skill.score}}</span>
+					</div> 
+				</li>
+			</ul>
+
+
+
+		</div>
+	</div>
+	<div class="buttonWrap">
+		<button class="filter" ng-click="pc.filterResults()">Filter</button>
+	</div>
+	</form>
+</div>
+
+
+
+
+<section class="profileSwitcher">
+	<ul>
+		<li ng-click="pc.displayAllProfiles()"><span class="highlight">{{pc.profileCount}}</span> Profiles</li>
+		<li ng-click="pc.displayShortlistedProfiles()">{{pc.shortlistedProfileCount}} Shortlisted</li>
+	</ul>
+</section>
+ <section class="profileRoll">
+
+
+ 	<a class="profile_card" ng-repeat="profile in pc.profileWrap">
+ 	
+		<div class="leftwing" ng-click="pc.onProfileSelect(profile.id)">
+			<div class="avatar_block">
+ 			<img ng-src="{{profile.avatar}}" alt="">
+ 		</div>
+ 		<div class="userInfo_block">
+ 			<h3>{{profile.name}}</h3>
+ 			<span class="meta">{{profile.location}}</span>
+ 			<p class="profile_excerpt">{{profile.about_excerpt}}</p>
+ 		</div>
+		</div>
+ 		
+		<div class="rightWing">
+ 		<div class="shortlist_block">
+ 			
+ 			<i class="fa fa-envelope-o" ng-class="{ noEmail : profile.email == null}"><md-tooltip>Email</md-tooltip></i>
+
+ 			<i class="fa fa-bookmark-o" ng-click="pc.triggerProfileShortlist(profile.id)"><md-tooltip>Shortlist</md-tooltip></i>
+ 		</div>
+ 		</div>
+ 	</a>
+	
+	<button class="loadMore" ng-click="pc.loadMoreProfiles()">Load Next 5</button>
+ </section>
+
+<!--ng-click="pc.onProfileSelect(profile.id)"-->

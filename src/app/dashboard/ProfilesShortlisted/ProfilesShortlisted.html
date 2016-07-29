@@ -1,0 +1,101 @@
+<!-- <section class="profileRoll">
+
+ 	<a class="profile_card" ng-repeat="profile in psc.shortlistedProfiles" >
+ 	{{profile.id}}
+ 		<div class="avatar_block">
+ 			<img ng-src="{{profile.avatar}}" alt="">
+ 		</div>
+ 		<div class="userInfo_block">
+ 			<h3>{{profile.name}}</h3>
+ 			<span class="meta">{{profile.location}}</span>
+ 			<p class="profile_excerpt">{{profile.about_excerpt}}</p>
+ 		</div>
+ 		<div class="shortlist_block">
+ 			<i class="fa fa-bookmark-o" ng-click="psc.triggerProfileShortlist(profile.id)"></i>
+ 		</div>
+ 	</a>
+
+ </section> -->
+
+
+
+
+
+ <!-- psc -->
+<div class="headline_wrap">
+	<h1>Search Results</h1>
+	<div class="filters_anchor" ng-click="psc.toggleFilters()">Filter Results</div>
+</div>
+<div class="filtersWrap" ng-show="psc.showFilters">
+
+<form name="filtersForm">
+	<div class="filters">
+		<div class="locationFilters">
+			<label for="">FILTER BY LOCATION</label>
+
+<ul class="inputStand">
+	<li ng-repeat="location in psc.locations">
+		<input id="{{location}}" type="checkbox" checklist-model="psc.filters.location" checklist-value="location"> 
+		<label for="{{location}}">{{location}}</label>
+	</li>
+</ul>
+		</div>
+		<div class="skillStrengthFilters">
+			<label for="">FILTER BY SKILL STRENGTH</label>
+			
+			<ul>
+			
+				<li>
+					<label for="">HTML</label>
+					<div class="range-slider">
+    					<input class="input-range" type="range" value="3" min="1" max="5" ng-model="psc.filters.skills.html">
+    					<span class="range-value"></span>
+					</div> 
+				</li>
+
+				<li>
+					<label for="">CSS</label>
+					<div class="range-slider">
+    					<input class="input-range1" type="range" value="2" min="1" max="5" ng-model="psc.filters.skills.css">
+    					<span class="range-value1"></span>
+					</div> 
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="buttonWrap">
+		<button class="filter" ng-click="psc.filterResults(psc.filters)">Filter</button>
+	</div>
+	</form>
+</div>
+
+<section class="profileSwitcher">
+	<ul>
+		<li ng-click="psc.displayAllProfiles()">{{psc.total_profiles}} Profiles</li>
+		<li><span class="count">{{psc.shortlistedProfileCount}}</span>Shortlisted</li>
+	</ul>
+</section>
+
+
+
+
+
+ <section class="profileRoll">
+
+ 	<a class="profile_card" ng-repeat="profile in psc.shortlistedProfiles track by profile.id" ng-click="psc.onProfileSelect(profile.id)">
+ 		<div class="avatar_block">
+ 			<img ng-src="{{profile.avatar}}" alt="">
+ 		</div>
+ 		<div class="userInfo_block">
+ 			<h3>{{profile.name}}</h3>
+ 			<span class="meta">{{profile.location}}</span>
+ 			<p class="profile_excerpt">{{profile.about_excerpt}}</p>
+ 		</div>
+ 		<div class="shortlist_block">
+ 			<i class="fa fa-bookmark-o" ng-click="psc.triggerProfileShortlist(profile.id)"></i>
+ 		</div>
+ 	</a>
+
+ </section>
+
+<!--ng-click="psc.onProfileSelect(profile.id)"-->
